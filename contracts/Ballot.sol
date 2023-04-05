@@ -91,6 +91,9 @@ contract Ballot {
         proposals[proposal].voteCount += sender.weight;
     }
 
+     /**
+     * @dev Get all proposals aactualy in list
+     */
     function getAllProposals() external view returns(Proposal[] memory){
         Proposal[] memory items = new Proposal[](proposals.length);
         for(uint i = 0; i < proposals.length; i++) {
@@ -98,7 +101,10 @@ contract Ballot {
         }
         return items;
     }
-
+    
+    /**
+     * @dev return every address of voters how haven t vote
+     */
     function getAllVoters() external view returns(address[] memory){
         return votersList;
     }
