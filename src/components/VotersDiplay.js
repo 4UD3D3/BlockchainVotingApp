@@ -4,7 +4,8 @@ import BallotContractArtifact from '../artifacts/contracts/Ballot.sol/Ballot.jso
 import { Dropdown } from 'react-bootstrap';
 
 
-const ContractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+const ContractAddress = process.env.ADDRESS_CONTRZCT_BALLOT;
+console.log(process.env.ADDRESS_CONTRZCT_BALLOT);
 
 function App() {
     const [voterList, setVoterList] = useState([]);
@@ -29,7 +30,7 @@ function App() {
             <h2>Liste des votants</h2>
             <Dropdown onSelect={handleSelect}>
                 <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                    {selectedVoter !== '' ? selectedVoter : 'Sélectionner un votant'}
+                    {selectedVoter !== '' ? selectedVoter : 'Liste des votants'}
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
