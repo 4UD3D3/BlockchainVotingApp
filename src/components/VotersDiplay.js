@@ -4,8 +4,7 @@ import BallotContractArtifact from '../artifacts/contracts/Ballot.sol/Ballot.jso
 import { Dropdown } from 'react-bootstrap';
 
 
-const ContractAddress = process.env.ADDRESS_CONTRZCT_BALLOT;
-console.log(process.env.ADDRESS_CONTRZCT_BALLOT);
+const ContractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 
 function App() {
     const [voterList, setVoterList] = useState([]);
